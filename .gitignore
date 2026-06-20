@@ -1,0 +1,8 @@
+frontend-vercel/node_modules/
+frontend-vercel/dist/
+backend-render/.venv/
+backend-render/uploads/
+backend-render/outputs/
+backend-render/backend/build/
+__pycache__/
+.DS_Store
