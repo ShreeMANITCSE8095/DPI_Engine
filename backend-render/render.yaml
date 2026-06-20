@@ -5,8 +5,9 @@ services:
     plan: free
     rootDir: backend-render
     buildCommand: |
-      cd backend && mkdir -p build && cd build && cmake .. -DCMAKE_BUILD_TYPE=Release && cmake --build . --config Release
-      pip install -r ../requirements.txt
+      pip install -r requirements.txt
+      cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+      cmake --build build --config Release
     startCommand: uvicorn server:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: FRONTEND_ORIGIN
